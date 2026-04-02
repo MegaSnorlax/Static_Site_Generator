@@ -43,7 +43,7 @@ class HTMLNode():
         for child in self.children:
             print("1")
             print(f"{child.tag}")
-            outputString += f" {child.tag}"
+            outputString += f"{child.tag}"
         return outputString
 
 
