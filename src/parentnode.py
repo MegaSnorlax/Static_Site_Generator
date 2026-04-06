@@ -16,13 +16,16 @@ class ParentNode(HTMLNode):
                 middleString += child.to_html()
             return f"<{self.tag}>{middleString}</{self.tag}>"
         
-    def __repr__(self):
-        return f""" 
-        HTML Node 
-        tag: {self.tag}
-        children: {self.string_children()}
-        props: {self.props_to_html}
-        """
+    # def __repr__(self):
+    #     return f""" 
+    #     HTML Node 
+    #     tag: {self.tag}
+    #     children: {self.string_children()}
+    #     props: {self.props_to_html}
+    #     """
 
+
+    def __repr__(self):
+        return f"ParentNode({self.tag}, children: {self.children}, {self.props})"
 
 

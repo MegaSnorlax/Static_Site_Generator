@@ -25,6 +25,15 @@ class TestTextNodeToHTML(unittest.TestCase):
         self.assertEqual(html_node.tag, "i")
         self.assertEqual(html_node.value, "This is an italic node")
 
+    def test_link(self):
+        node = TextNode("static site generator", TextType.LINK, "https://www.boot.dev/courses/")
+        html_node = text_node_to_html_node(node)
+        html = html_node.to_html()
+        self.assertEqual(html_node.tag, "a")
+        self.assertEqual(html_node.value, "static site generator")
+        self.assertEqual(html, '<a href="https://www.boot.dev/courses/">static site generator</a>')
+
+
 if __name__ == "__main__":
     unittest.main()
 

@@ -10,16 +10,23 @@ class LeafNode(HTMLNode):
             raise ValueError("LeafNode.value has no value")
         elif self.tag == None:
             return self.value
+        elif self.props != None:
+            for key, value in self.props.items():
+                return f"<{self.tag} {key}=\"{value}\">{self.value}</{self.tag}>"
         else:
             return f"<{self.tag}>{self.value}</{self.tag}>"
         
+    # def __repr__(self):
+    #     return f""" 
+    #     Leaf Node 
+    #     tag: {self.tag}
+    #     value: {self.value}
+    #     props: {self.props_to_html()}
+    #     """
+
     def __repr__(self):
-        return f""" 
-        HTML Node 
-        tag: {self.tag}
-        value: {self.value}
-        props: {self.props_to_html}
-        """
+        return f"LeafNode({self.tag}, {self.value}, {self.props})"
+
 
 
 

@@ -17,7 +17,7 @@ class TestHTMLNode(unittest.TestCase):
     def test_eq_HTMLNodePropsToHTMLFunction_(self):
         node1 = HTMLNode("tag", "value", nodeList, testProps)
         output = node1.props_to_html()
-        print(output)
+        # print(output)
         expectedOutput = ' href="https://www.google.com" target="_blank" class="link"'
         self.assertEqual(output, expectedOutput)
 

@@ -9,8 +9,8 @@ class TestParentNode(unittest.TestCase):
         parentNode1 = ParentNode("p",  [leafNode1, leafNode2], testProps)
         parentNode2 = ParentNode("p",  [leafNode1, leafNode2], testProps)
 
-        print(parentNode1.to_html())
-        print(parentNode2.to_html())
+        # print(parentNode1.to_html())
+        # print(parentNode2.to_html())
         
         self.assertEqual(parentNode1, parentNode2)
 
@@ -31,9 +31,9 @@ class TestParentNode(unittest.TestCase):
         toHTML1 = parentNode1.to_html()
         toHTML2 = parentNode2.to_html()
         toHTML3 = parentNode3.to_html()
-        print(f"parentNode1: {toHTML1}")
-        print(f"parentNode2: {toHTML2}")
-        print(f"parentNode3: {toHTML3}")
+        # print(f"parentNode1: {toHTML1}")
+        # print(f"parentNode2: {toHTML2}")
+        # print(f"parentNode3: {toHTML3}")
         
         self.assertEqual(toHTML1, toHTML2)
     
