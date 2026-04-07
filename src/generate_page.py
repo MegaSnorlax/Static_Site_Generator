@@ -3,7 +3,7 @@ from markdown_to_html_node import markdown_to_html_node
 from extract_title import extract_title
 import os 
 
-def generate_page(from_path, template_path, dest_path):
+def generate_page(from_path, template_path, dest_path, basepath):
 
     print(f"Generating page from {from_path} to {dest_path} using {template_path}")
 
@@ -21,6 +21,8 @@ def generate_page(from_path, template_path, dest_path):
 
     html = html.replace("{{ Title }}", title)
     html = html.replace("{{ Content }}", singleHTMLNode.to_html())
+    html = html.replace("href=\"/", f"href=\"{basepath}")
+    html = html.replace("src=\"/", f"src=\"{basepath}")
 
     # check if dest path exist 
 
