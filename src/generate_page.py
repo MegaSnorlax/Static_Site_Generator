@@ -21,8 +21,8 @@ def generate_page(from_path, template_path, dest_path, basepath):
 
     html = html.replace("{{ Title }}", title)
     html = html.replace("{{ Content }}", singleHTMLNode.to_html())
-    html = html.replace("href=\"/", f"href=\"{basepath}")
-    html = html.replace("src=\"/", f"src=\"{basepath}")
+    html = html.replace('href="/', f'href="{basepath}')
+    html = html.replace('src="/', f'src="{basepath}')
 
     # check if dest path exist 
 
