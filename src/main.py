@@ -10,7 +10,7 @@ import sys
 def main():
 
     basepath = "/"
-    if sys.argv[1]:
+    if len(sys.argv) > 1 and sys.argv[1] is not None:
         basepath = sys.argv[1]
 
     generate_public_directory("static")
