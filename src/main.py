@@ -11,9 +11,10 @@ def main():
 
     basepath = "/"
     if len(sys.argv) > 1 and sys.argv[1] is not None:
+        print(f"sys.argv[1]: {sys.argv[1]}")
         basepath = sys.argv[1]
 
-    generate_public_directory("static")
+    generate_public_directory("static", "docs")
 
     # generate_page("content/index.md", "template.html", "public/index.html")#
 

@@ -3,9 +3,9 @@
 import os
 import shutil
 
-def generate_public_directory(sourcePath: str):
+def generate_public_directory(sourcePath: str, destinationPath: str):
 
-    destinationPath = "public"
+    # destinationPath = "docs"
     if not os.path.exists(destinationPath):
         raise Exception(f"destination path {destinationPath} does not exist")
     if not os.path.exists(sourcePath):
