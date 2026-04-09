@@ -10,9 +10,11 @@ import sys
 def main():
 
     basepath = "/"
+    print(f"len(sys.argv) {len(sys.argv)}")
     if len(sys.argv) > 1 and sys.argv[1] is not None:
         print(f"sys.argv[1]: {sys.argv[1]}")
         basepath = sys.argv[1]
+    print(f"basepath: {basepath}")
 
     generate_public_directory("static", "docs")
 

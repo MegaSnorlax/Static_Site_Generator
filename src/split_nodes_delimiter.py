@@ -28,7 +28,7 @@ def split_nodes_delimiter(old_nodes: list[TextNode], delimeter, text_type):
                 separatedText = node.text.split(delimeter)
                 separatedText = [x for x in separatedText if x != ""]
 
-                print(f"separatedText: {separatedText}")
+                # print(f"separatedText: {separatedText}")
                 returnList = []
                 for i in range(len(separatedText)):
                     delimeterIsEven = False
