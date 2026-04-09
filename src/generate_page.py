@@ -33,15 +33,15 @@ def generate_page(from_path, template_path, dest_path, basepath):
     if html != before2:
         print("html src replaced")
 
-    matchesHref = re.findall(r'href="(.*?)"', html)
+    # matchesHref = re.findall(r'href="(.*?)"', html)
 
-    for href in matchesHref:
-        print(f"href: {href}")
+    # for href in matchesHref:
+    #     print(f"href: {href}")
 
-    matchesSrc = re.findall(r'src="(.*?)"', html)
+    # matchesSrc = re.findall(r'src="(.*?)"', html)
 
-    for src in matchesSrc:
-        print(f"src: {src}")
+    # for src in matchesSrc:
+    #     print(f"src: {src}")
 
     # check if dest path exist 
 
