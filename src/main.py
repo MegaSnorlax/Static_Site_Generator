@@ -20,6 +20,8 @@ def main():
 
     # generate_page("content/index.md", "template.html", "public/index.html")#
 
+    # comment to generate new push
+
     generate_pages_recursive("content/", "template.html", "docs/", basepath)
 
 if __name__ == "__main__":
